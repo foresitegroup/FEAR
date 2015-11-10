@@ -1,4 +1,16 @@
 <?php
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'....';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  } 
+  $excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+  return $excerpt;
+}
+
 add_action( 'wp_enqueue_scripts', 'enqueue_and_register_my_scripts' );
 function enqueue_and_register_my_scripts(){
   wp_deregister_script(
@@ -24,6 +36,10 @@ function arphabet_widgets_init() {
   register_sidebar(array(
     'name'          => 'Home Page Video',
     'id'            => 'home_page_video',
+  ));
+  register_sidebar(array(
+    'name'          => 'Home Page Calendar',
+    'id'            => 'home_page_calendar',
   ));
   register_sidebar(array(
     'name'          => 'MailChimp Sign Up',

@@ -16,7 +16,7 @@
 
 <div class="site-width home-social">
   <div class="one-third">
-    <h2 class="soc-head">@NICOLETFEAR</h2>
+    <h2 class="home-head">@NICOLETFEAR</h2>
     <hr>
     <div id="twitter-feed-head">FOLLOW US ON TWITTER</div>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/twitterFetcher.js"></script>
@@ -40,7 +40,7 @@
   </div>
 
   <div class="two-third last">
-    <h2 class="soc-head">#NICOLETFEAR4786</h2>
+    <h2 class="home-head">#NICOLETFEAR4786</h2>
     <hr>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/instafeed.min.js"></script>
     <script type="text/javascript">
@@ -64,10 +64,36 @@
   <a href="<?php dynamic_sidebar( 'home_page_video' ); ?>&rel=0" data-rel="lightbox-video-homepage"><i class="fa fa-play-circle-o"></i></a>
 </div>
 
-<div class="site-width">
-  <br><br><br>
-  "UPCOMING EVENTS" AND "FEAR THIS" GOES HERE
-  <br><br><br><br>
+<div class="site-width home-events-blog">
+  <div class="two-third home-events">
+    <h2 class="home-head">UPCOMING EVENTS</h2>
+    <hr>
+    <?php dynamic_sidebar( 'home_page_calendar' ); ?>
+    <div class="soc-foot">
+      <a href="schedule">FULL SCHEDULE <i class="fa fa-caret-down"></i></a>
+    </div>
+  </div>
+
+  <div class="one-third last fear-this">
+    <h2 class="home-head">FEAR THIS</h2>
+    <hr>
+    <?php
+    $tickler_query = new WP_Query('posts_per_page=3');
+    if ($tickler_query->have_posts()) {
+      while ($tickler_query->have_posts()) {
+        $tickler_query->the_post();
+        echo "<div class=\"ft-date\">" . get_the_date() . "</div>";
+        echo "<h3>" . get_the_title() . "</h3>";
+        echo excerpt(19);
+        echo "<a href=\"" . get_permalink() . "\">Continue Reading</a>";
+      }
+    }
+    wp_reset_postdata();
+    ?>
+    <div class="soc-foot">
+      <a href="fear-this/">FEAR THIS BLOG <i class="fa fa-caret-down"></i></a>
+    </div>
+  </div>
 </div>
 
 <div class="home-help">

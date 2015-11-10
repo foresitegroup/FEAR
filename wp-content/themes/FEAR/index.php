@@ -22,9 +22,13 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+				<div class="subheader">
+					<div class="site-width">
+						<div>
+					    <h2 class="page-title screen-reader-text"><?php single_post_title(); ?></h2>
+					  </div>
+					</div>
+				</div>
 			<?php endif; ?>
 
 			<?php
@@ -36,7 +40,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'content', get_post_format() );
+				get_template_part( 'content-blog', get_post_format() );
 
 			// End the loop.
 			endwhile;

@@ -144,12 +144,44 @@ INPUT[type="submit"]:hover {
   clear: both;
 }
 
+.mt {
+  margin-top: 1.7em;
+}
+
 .mb {
   margin-bottom: 1.7em;
 }
 
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+ 
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.topbar-space {
+  height: 100px;
+}
+
 .topbar {
 	background: url(images/topbar-background.jpg) top center repeat-y;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(2,36,39,0.5);
+  -moz-box-shadow: 0px 1px 8px 0px rgba(2,36,39,0.5);
+  box-shadow: 0px 1px 8px 0px rgba(2,36,39,0.5);
 }
 
 #logo {
@@ -430,11 +462,12 @@ A:hover .hexagon.youtube {
   background: #0A7B85;
 }
 
-.home-social {
+.home-social,
+.home-events-blog {
   padding: 58px 0;
 }
 
-.soc-head {
+.home-head {
   font-family: Impact, Charcoal, sans-serif;
   font-size: 45px;
   line-height: 1em;
@@ -503,6 +536,98 @@ A:hover .hexagon.youtube {
 
 #instafeed A:nth-child(4n+4) IMG {
   margin-right: 0;
+}
+
+.home-events .widget {
+  list-style-type: none;
+}
+
+.home-events .widgettitle,
+.home-events .simcal-calendar-head,
+.home-events .simcal-event-start-date {
+  display: none;
+}
+
+.home-events .simcal-default-calendar-list DT.simcal-day-label {
+  margin: 0;
+  border-bottom: 0 !important;
+  font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
+  font-size: 35px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.home-events DT.simcal-day-label > SPAN {
+  background: transparent !important;
+  color: #007A85 !important;
+  padding: 0;
+}
+
+.home-events .simcal-default-calendar-list ul.simcal-events {
+  margin: 0;
+  padding: 0;
+}
+
+.home-events .simcal-default-calendar-list .simcal-event-details {
+  font-size: 25px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.home-events .simcal-default-calendar-list .simcal-event-details P {
+  margin-bottom: 0.5em;
+}
+
+.home-events .simcal-default-calendar-list .simcal-event-details .moredetails {
+  float: right;
+  margin: 0 0 0 2em;
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.home-events .simcal-default-calendar-list dd.simcal-day {
+  border-bottom: 1px solid #CCCCCC;
+  margin-bottom: 1.2em;
+}
+
+.home-events-blog .soc-foot A .fa {
+  color: #0A7B85;
+}
+
+.home-events-blog .fear-this {
+  font-size: 15px;
+  line-height: 1.2em;
+}
+
+.home-events-blog .fear-this .ft-date {
+  font-size: 12px;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: #959595;
+  padding-top: 1.4em;
+}
+
+.home-events-blog .fear-this H3 {
+  margin: 0;
+  font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.home-events-blog .fear-this A {
+  display: block;
+  margin: 0.8em 0 0.4em;
+  font-weight: bold;
+}
+
+.home-events-blog .soc-foot {
+  padding: 0;
+}
+
+.home-events-blog .fear-this .soc-foot A {
+  margin: 1em 0 0;
 }
 
 #home-video {
@@ -630,4 +755,39 @@ A:hover .hexagon.youtube {
 .footer .one-half.last #first {
   vertical-align: middle;
   margin-left: 0.6em;
+}
+
+.blog-entry {
+  padding-bottom: 2em;
+}
+
+.blog-entry H2 {
+  margin: 0;
+  padding-bottom: 0.1em;
+}
+
+.blog-entry .blog-date {
+  font-size: 80%;
+  font-weight: bold;
+  padding-bottom: 0.4em;
+}
+
+
+@media only screen and (max-width: 800px) {
+  /* Small computer or landscape tablet */
+  .site-width {
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Tablet */
+}
+
+@media only screen and (max-width: 600px) {
+  /* Small tablet */
+}
+
+@media only screen and (max-width: 480px) {
+  /* Phone */
 }

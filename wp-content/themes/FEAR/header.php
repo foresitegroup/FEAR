@@ -32,7 +32,12 @@
 <div class="topbar">
 	<div class="site-width cf">
 		<a href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Nicolet FEAR Team 4786" id="logo"></a>
-		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+
+    <div id="main-menu-wrap">
+      <label for="show-menu" id="menu-toggle"><i class="fa fa-bars"></i></label>
+      <input type="checkbox" id="show-menu" role="button">
+  		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+    </div>
 	</div>
 </div>
 

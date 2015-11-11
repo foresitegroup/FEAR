@@ -22,15 +22,55 @@
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/twitterFetcher.js"></script>
     <script>
       var config1 = {
-        "id": '611538467353333761',
+        "id": '435921074492948480',
         "domId": 'twitter-feed',
-        "maxTweets": 5,
+        "maxTweets": 4,
         "enableLinks": true,
-        "showTime": false,
-        "showUser": false,
-        "showRetweet": false,
-        "showInteraction": false
+        "showTime": true,
+        "showUser": true,
+        "showRetweet": true,
+        "showInteraction": false,
+        "dateFunction": dateFormatter
       };
+      function dateFormatter(date) {
+        //return date.toString();
+        var now = Math.round(new Date().getTime()/1000.0);
+        var tweetdate = Math.round(new Date(date).getTime()/1000.0);
+        var offset = date.getTimezoneOffset();
+        var timestamp = tweetdate - (offset * 60);
+        var output = "";
+
+        var month = new Array();
+        month[0] = "Jan";
+        month[1] = "Feb";
+        month[2] = "Mar";
+        month[3] = "Apr";
+        month[4] = "May";
+        month[5] = "Jun";
+        month[6] = "Jul";
+        month[7] = "Aug";
+        month[8] = "Sep";
+        month[9] = "Oct";
+        month[10] = "Nov";
+        month[11] = "Dec";
+
+        if (now - timestamp >= 86400) {
+          output = month[date.getMonth()] + ' ' + date.getDate();
+        } else {
+          if (now - timestamp >= 3600) {
+            output = Math.round(((now - timestamp) / 60) / 60) + 'h';
+          } else {
+            var themin = Math.round((now - timestamp) / 60);
+            if (themin < 1) {
+              output = 'Now';
+            } else {
+              output = themin + 'm';
+            }
+          }
+        }
+
+        return output;
+      }
       twitterFetcher.fetch(config1);
     </script>
     <div id="twitter-feed"></div>
@@ -44,11 +84,12 @@
     <hr>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/instafeed.min.js"></script>
     <script type="text/javascript">
+      var ImgLimit = (jQuery(window).width() < 800) ? 4 : 6;
       var userFeed = new Instafeed({
-        clientId: '2a5b84a361844297b9f1816cc8d432f8',
+        clientId: '5ba88761dcdc43b5a29d96412cd0782e',
         get: 'user',
-        userId: '1702006231',
-        limit: 12,
+        userId: '923916011',
+        limit: ImgLimit,
         template: '<a href="{{link}}" target="new"><img src="{{image}}" /></a>'
       });
       userFeed.run();
@@ -99,7 +140,9 @@
 <div class="home-help">
   <div class="site-width">
     <img src="<?php echo get_template_directory_uri(); ?>/images/robot-footer.png">
-    HOW CAN I HELP? <a href="#">LEARN MORE</a>
+    <div class="vert-cent">
+      HOW CAN I HELP? <a href="#">LEARN MORE</a>
+    </div>
   </div>
 </div>
 

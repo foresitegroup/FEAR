@@ -138,7 +138,8 @@ INPUT[type="submit"]:hover {
 }
 
 .site-width:after,
-.cf:after {
+.cf:after,
+#twitter-feed .tweet:before {
   content: "";
   display: table;
   clear: both;
@@ -150,6 +151,12 @@ INPUT[type="submit"]:hover {
 
 .mb {
   margin-bottom: 1.7em;
+}
+
+.vert-cent {
+  position: absolute; /* Vertical centering */
+  top: 50%; /* Vertical centering */
+  transform: translateY(-50%); /* Vertical centering */
 }
 
 .video {
@@ -189,11 +196,20 @@ INPUT[type="submit"]:hover {
 	margin-top: 14px;
 }
 
-.menu-main-menu-container {
+#main-menu-wrap {
 	float: left;
 	margin-left: 36px;
 	height: 100px;
 	background: #0A7B85;
+}
+
+#menu-toggle,
+#show-menu {
+  display: none;
+}
+
+#show-menu:checked + .menu-main-menu-container {
+  display: block;
 }
 
 #menu-main-menu {
@@ -376,6 +392,7 @@ INPUT[type="submit"]:hover {
 
 .home-content IMG {
   max-width: 100%;
+  height: auto;
 }
 
 .home-content H1 {
@@ -494,7 +511,7 @@ A:hover .hexagon.youtube {
 
 #twitter-feed UL LI {
   border-bottom: 1px solid #CCCCCC;
-  padding: 1em 0;
+  padding: 1.15em 0;
 }
 
 #twitter-feed UL LI P {
@@ -503,9 +520,26 @@ A:hover .hexagon.youtube {
   word-wrap: break-word;
 }
 
+#twitter-feed .user IMG,
+#twitter-feed .user A span[data-scribe="element:name"],
 #twitter-feed UL LI P A SPAN:first-child,
 #twitter-feed UL LI P A SPAN:nth-child(3) {
   display: none;
+}
+
+#twitter-feed .user {
+  float: left;
+  font-weight: bold;
+}
+
+#twitter-feed .timePosted {
+  float: right;
+  font-weight: bold;
+  font-size: 80%;
+}
+
+#twitter-feed .tweet {
+  padding-top: 1.6em;
 }
 
 .soc-foot {
@@ -529,14 +563,19 @@ A:hover .hexagon.youtube {
 }
 
 #instafeed IMG {
-  width: 23.5%;
+  /*width: 23.5%;*/ /* 4 across */
+  width: 32%;
   height: auto;
   margin: 0 2% 1% 0;
 }
 
-#instafeed A:nth-child(4n+4) IMG {
+#instafeed A:nth-child(3n+3) IMG {
   margin-right: 0;
 }
+
+/*#instafeed A:nth-child(4n+4) IMG {
+  margin-right: 0;
+}*/
 
 .home-events .widget {
   list-style-type: none;
@@ -659,7 +698,9 @@ A:hover .hexagon.youtube {
   background: #F1F2F2;
   font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
   font-size: 56px;
-  line-height: 122px;
+  line-height: 0.8em;
+  height: 122px;
+  position: relative;
 }
 
 .home-help IMG {
@@ -667,6 +708,10 @@ A:hover .hexagon.youtube {
   margin-right: 1em;
   position: relative;
   top: -23px;
+}
+
+.home-help .vert-cent {
+  margin-left: 150px;
 }
 
 .home-gallery {
@@ -778,16 +823,248 @@ A:hover .hexagon.youtube {
   .site-width {
     width: 98%;
   }
+
+  #main-menu-wrap {
+    float: right;
+    margin: 0 1% 0 0;
+  }
+
+  #menu-main-menu > LI {
+    padding-left: 15px;
+  }
+
+  #menu-main-menu LI A:link,
+  #menu-main-menu LI A:visited {
+    font-size: 14px;
+  }
+
+  .countdown-details {
+    font-size: 24px;
+  }
+
+  .home-head {
+    font-size: 38px;
+  }
+
+  #instafeed IMG {
+    width: 49%;
+  }
+
+  #instafeed A:nth-child(3n+3) IMG {
+    margin-right: 2%;
+  }
+
+  #instafeed A:nth-child(2n+2) IMG {
+    margin-right: 0;
+  }
+  
+  .signup .site-width .one-half {
+    line-height: 1em;
+  }
+
+  .signup .site-width H2 {
+    float: none;
+    margin: 0;
+  }
+
+  .signup INPUT[type="email"] {
+    width: calc(85% - 120px);
+  }
 }
 
 @media only screen and (max-width: 768px) {
   /* Tablet */
+  #main-menu-wrap {
+    margin: 0;
+    width: 70%;
+  }
+
+  #menu-toggle {
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin: 20px 5% 0 0;
+    color: #FFFFFF;
+    font-size: 3em;
+  }
+
+  .menu-main-menu-container {
+    position: absolute;
+    top: 0.5em;
+    left: auto;
+    right: auto;
+    z-index: 999999;
+    width: 33%;
+    background-color: #0A7B85;
+    display: none;
+  }
+
+  #menu-main-menu > LI,
+  #menu-main-menu LI.donate {
+    float: none;
+    line-height: 1em;
+    padding: 0.5em 0;
+    text-align: center;
+  }
+
+  #menu-main-menu LI A:link,
+  #menu-main-menu LI A:visited {
+    font-size: 22px;
+    display: block;
+  }
+  
+  #menu-main-menu LI.donate {
+    padding: 0;
+  }
+
+  #menu-main-menu LI.donate A:link,
+  #menu-main-menu LI.donate A:visited {
+    padding: 0.5em;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+
+  #menu-main-menu LI:hover UL {
+    position: static;
+    margin-top: 0.5em;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   /* Small tablet */
+  #main-menu-wrap {
+    width: 60%;
+  }
+
+  .menu-main-menu-container {
+    width: 40%;
+    top: 100px;
+    right: 0;
+  }
+
+  .countdown-details {
+    float: none;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 0.5em;
+    position: static;
+    transform: translateY(0);
+  }
+
+  .pbc-cover {
+    float: none;
+    width: 100%;
+    border-left: 0;
+  }
+
+  .one-half,
+  .one-third,
+  .two-third,
+  .one-half.last,
+  .one-third.last,
+  .two-third.last {
+    float: none;
+    width: 96%;
+    margin: 0 auto 3em;
+  }
+
+  .one-half.last,
+  .one-third.last,
+  .two-third.last {
+    margin-bottom: 1em;
+  }
+
+  .home-content {
+    background-size: contain;
+    background-position: center center;
+  }
+
+  .home-content IMG {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .home-help {
+    font-size: 48px;
+  }
+
+  .signup .site-width {
+    height: auto;
+    line-height: normal;
+    padding: 1.5em 0;
+  }
+
+  .signup .site-width .one-half,
+  .signup .site-width .one-half.last {
+    position: static;
+    top: 0;
+    transform: translateY(0);
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .footer {
+    line-height: normal;
+    padding: 1.5em 0;
+  }
+
+  .footer .one-half,
+  .footer .one-half.last {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.5em 0;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   /* Phone */
+  .topbar {
+    background: #FFFFFF;
+  }
+
+  #main-menu-wrap {
+    width: auto;
+    background: none;
+  }
+
+  #menu-toggle {
+    margin-right: 40%;
+    color: #0A7B85;
+  }
+
+  .menu-main-menu-container {
+    width: 100%;
+  }
+
+  #menu-main-menu {
+    padding-top: 0.5em;
+  }
+  
+  #menu-main-menu > LI {
+    padding: 1em 0;
+  }
+
+  #menu-main-menu LI A:link,
+  #menu-main-menu LI A:visited {
+    font-size: 30px;
+  }
+
+  #menu-main-menu LI.donate A:link,
+  #menu-main-menu LI.donate A:visited {
+    padding: 0.7em 0;
+  }
+
+  .pbc-hours:after,
+  .pbc-minutes:after,
+  .pbc-seconds:after {
+    font-size: 50px;
+    top: 5px;
+    left: -8px;
+  }
+
+  .home-help {
+    font-size: 34px;
+  }
 }

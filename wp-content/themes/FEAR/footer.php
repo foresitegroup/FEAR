@@ -14,7 +14,7 @@
   <div class="site-width">
     <div class="one-half">
       &copy; <?php echo date("Y"); ?> Nicolet FEAR Team 4786. <a href="http://www.foresitegrp.com">Site by Foresite Group.</a>
-      </div>
+    </div>
 
     <div class="one-half last">
       <a href="http://facebook.com/NicoletFear"><div class="hexagon facebook"><i class="fa fa-facebook"></i></div></a>

@@ -1,4 +1,7 @@
 <?php
+// I'll style the gallery myself, thank you....
+add_filter( 'use_default_gallery_style', '__return_false' );
+
 function excerpt($limit) {
   $excerpt = explode(' ', get_the_excerpt(), $limit);
   if (count($excerpt)>=$limit) {

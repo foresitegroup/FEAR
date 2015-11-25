@@ -1,4 +1,5 @@
 <?php putRevSlider( 'homepage' ); ?>
+<?php //if( function_exists('cyclone_slider') ) cyclone_slider('homepage'); ?>
 
 <div class="greenband">
   <div class="site-width countdown-wrap">
@@ -102,7 +103,7 @@
 </div>
 
 <div id="home-video">
-  <a href="<?php dynamic_sidebar( 'home_page_video' ); ?>&rel=0" data-rel="lightbox-video-homepage"><i class="fa fa-play-circle-o"></i></a>
+  <a href="<?php dynamic_sidebar( 'home_page_video' ); ?>&rel=0&autoplay=1" data-rel="lightbox-video-homepage"><i class="fa fa-play-circle-o"></i></a>
 </div>
 
 <div class="site-width home-events-blog">

@@ -212,11 +212,11 @@ A.roundgreen:hover, A.roundgreen:active {
 }
 
 .mt {
-  margin-top: 1.7em;
+  margin-top: 35px;
 }
 
 .mb {
-  margin-bottom: 1.7em;
+  margin-bottom: 35px;
 }
 
 .vert-cent {
@@ -250,7 +250,7 @@ A.roundgreen:hover, A.roundgreen:active {
 .topbar {
 	background: url(images/topbar-background.jpg) top center repeat-y;
   position: fixed;
-  z-index: 99999;
+  z-index: 1100;
   width: 100%;
   -webkit-box-shadow: 0px 1px 8px 0px rgba(2,36,39,0.5);
   -moz-box-shadow: 0px 1px 8px 0px rgba(2,36,39,0.5);
@@ -358,6 +358,15 @@ A.roundgreen:hover, A.roundgreen:active {
 	color: #0A7B85;
 }
 
+A.tp-caption:link, A.tp-caption:visited {
+  color: #0A7B85 !important;
+}
+
+A.tp-caption:hover, A.tp-caption:active,
+.tp-caption .fa-icon-caret-down {
+  color: #FFFFFF !important;
+}
+
 .subheader {
   background: url(images/subheader.jpg) top center no-repeat;
   height: 188px;
@@ -365,7 +374,7 @@ A.roundgreen:hover, A.roundgreen:active {
   color: #FFFFFF;
   font-size: 26px;
   line-height: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 50px;
   position: relative; /* Vertical centering */
 }
 
@@ -384,14 +393,34 @@ A.roundgreen:hover, A.roundgreen:active {
   transform: none;
 }
 
+.subheader-below {
+  position: relative;
+  top: -85px;
+  text-align: center;
+  padding: 2.8em 0;
+  /*margin-bottom: -85px;*/
+}
+
 .subheader H2,
-.greenband H2 {
+.greenband H2,
+.darkgreenband H2 {
   margin: 0;
   font-size: 82px;
   font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   line-height: 1em;
 }
+
+.subheader H3,
+.greenband H3,
+.darkgreenband H3 {
+  margin: 0;
+  font-size: 60px;
+  font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
 
 .grayband {
   background: #EBEBEB;
@@ -410,6 +439,12 @@ A.roundgreen:hover, A.roundgreen:active {
 
 .greentext {
   color: #007A85;
+}
+
+.bandtext {
+  text-align: center;
+  padding: 2.8em 0;
+  margin-bottom: 4em;
 }
 
 .bandhead {
@@ -519,6 +554,13 @@ A.roundgreen:hover, A.roundgreen:active {
 .aleft { text-align: left; }
 .aright { text-align: right; }
 .acenter { text-align: center; }
+
+.side-header {
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 107px;
+  line-height: 1em;
+  color: #003D42;
+}
 
 .hexagon {
   width: calc(1.1em * 0.57735);
@@ -786,6 +828,24 @@ A:hover .hexagon.youtube {
   padding: 0;
 }
 
+.gallery {
+  margin: 2em 0;
+}
+
+.gallery .gallery-item {
+  float: left;
+  margin: 0 0 0 15px;
+}
+
+.gallery .gallery-item:first-child {
+  margin: 0;
+}
+
+.gallery .gallery-item IMG {
+  width: 188px;
+  height: auto;
+}
+
 .home-help {
   border-top: 1px solid #EBEBEB;
   background: #F1F2F2;
@@ -1031,6 +1091,10 @@ A:hover .hexagon.youtube {
   .signup INPUT[type="email"] {
     width: calc(85% - 120px);
   }
+
+  .side-header {
+    font-size: 80px;
+  }
   
   .grayband.about .site-width {
     text-align: center;
@@ -1103,6 +1167,10 @@ A:hover .hexagon.youtube {
   .subheader .site-width DIV DIV {
     white-space: normal;
   }
+
+  .side-header {
+    font-size: 72px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1148,6 +1216,11 @@ A:hover .hexagon.youtube {
   .one-third.last,
   .two-third.last {
     margin-bottom: 1em;
+  }
+
+  .side-header.aright {
+    margin: 0 auto;
+    text-align: left;
   }
 
   .rg-left, .rg-right { float: none; }

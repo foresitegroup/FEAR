@@ -1028,6 +1028,25 @@ A:hover .hexagon.youtube {
   color: #FFFFFF;
 }
 
+.departments {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.2em;
+  padding: 1em 0;
+}
+
+.departments IMG {
+  height: 75px !important;
+  width: auto !important;
+}
+
+.departments H4 {
+  font-size: 38px;
+  line-height: 0.9em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
 
 
 @media only screen and (max-width: 800px) {
@@ -1052,6 +1071,11 @@ A:hover .hexagon.youtube {
   #menu-main-menu LI A:link,
   #menu-main-menu LI A:visited {
     font-size: 14px;
+  }
+  
+  .subheader .site-width DIV,
+  .subheader .site-width DIV DIV {
+    white-space: normal;
   }
 
   .countdown-details {
@@ -1103,6 +1127,14 @@ A:hover .hexagon.youtube {
   .about-first-logo IMG {
     max-width: 52%;
     height: auto;
+  }
+  
+  .departments IMG {
+    max-width: none;
+  }
+
+  .departments H4 {
+    font-size: 27px;
   }
 }
 
@@ -1162,10 +1194,6 @@ A:hover .hexagon.youtube {
   #menu-main-menu LI:hover UL {
     position: static;
     margin-top: 0.5em;
-  }
-
-  .subheader .site-width DIV DIV {
-    white-space: normal;
   }
 
   .side-header {
@@ -1279,6 +1307,10 @@ A:hover .hexagon.youtube {
     display: block;
     margin: 0 auto;
   }
+
+  .departments H4 {
+    font-size: 38px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1328,9 +1360,9 @@ A:hover .hexagon.youtube {
     font-size: 46px;
   }
 
-  .subheader .site-width DIV {
+/*  .subheader .site-width DIV {
     white-space: normal;
-  }
+  }*/
 
   .pbc-hours:after,
   .pbc-minutes:after,

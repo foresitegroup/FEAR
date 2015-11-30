@@ -1,4 +1,7 @@
 <?php
+// We want Featured Images on Pages and Posts
+add_theme_support( 'post-thumbnails' );
+
 // I'll style the gallery myself, thank you....
 add_filter( 'use_default_gallery_style', '__return_false' );
 

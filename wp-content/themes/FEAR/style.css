@@ -411,6 +411,17 @@ A.tp-caption:hover, A.tp-caption:active,
   margin: 0;
 }
 
+.subheader-below A:link, .subheader-below A:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.subheader-below A:hover, .subheader-below A:active {
+  color: #0A7B85;
+}
+
 .subheader H2,
 .greenband H2,
 .darkgreenband H2 {
@@ -759,6 +770,19 @@ A:hover .hexagon.youtube {
 .home-events .simcal-calendar-head,
 .home-events .simcal-event-start-date {
   display: none;
+}
+
+.simcal-default-calendar-list .simcal-event-details P,
+.simcal-default-calendar-list .simcal-event-details .simcal-event-description {
+  margin: 0 !important;
+}
+
+.simcal-default-calendar-list .simcal-event-details .simcal-event-description {
+  display: inline-block;
+}
+
+.simcal-default-calendar-list ul.simcal-events li.simcal-event {
+  margin-bottom: 1.5em;
 }
 
 .home-events .simcal-default-calendar-list DT.simcal-day-label {
@@ -1252,9 +1276,42 @@ A:hover .hexagon.youtube {
   margin: 0;
 }
 
+INPUT[type="text"].ninja-forms-field,
+INPUT[type="email"].ninja-forms-field,
+.ninja-forms-field {
+  font-size: 18px !important;
+  font-weight: bold;
+  border: 1px solid #555555;
+  border-radius: 9px;
+  padding: 1em 1.5em;
+}
+
+.ninja-forms-field.nf-desc {
+  font-size: 18px !important;
+  font-weight: normal;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.checkbox-wrap LABEL {
+  font-weight: normal !important;
+}
+
 .ninja-forms-required-items,
 .ninja-forms-req-symbol {
   display: none;
+}
+
+.ninja-forms-field.sponsor-header.nf-desc {
+  text-align: center;
+  padding-bottom: 1.75em;
+}
+
+.ninja-forms-field.sponsor-header.nf-desc H4 {
+  font-size: 36px;
+  margin: 0 0 0.5em 0;
+  display: block;
 }
 
 .fear-contact-center-list-radio-wrap {
@@ -1266,36 +1323,27 @@ A:hover .hexagon.youtube {
   font-size: 36px;
 }
 
+.fear-sponsor-list-radio-wrap UL,
 .fear-contact-center-list-radio-wrap UL {
   display: inline-block;
 }
 
+.fear-sponsor-list-radio-wrap LI,
 .fear-contact-center-list-radio-wrap LI {
   float: left;
   padding-left: 20px !important;
 }
 
+.fear-sponsor-list-radio-wrap LI:first-child,
 .fear-contact-center-list-radio-wrap LI:first-child {
   padding-left: 0 !important;
 }
 
+.fear-sponsor-list-radio-wrap LABEL,
+.fear-sponsor-list-radio-wrap LI LABEL,
 .fear-contact-center-list-radio-wrap LI LABEL {
   font-size: 18px;
   font-weight: bold !important;
-}
-
-INPUT[type="text"].ninja-forms-field,
-INPUT[type="email"].ninja-forms-field,
-.ninja-forms-field {
-  font-size: 18px !important;
-  font-weight: bold;
-  border: 1px solid #555555;
-  border-radius: 9px;
-  padding: 1em 1.5em;
-}
-
-.checkbox-wrap LABEL {
-  font-weight: normal !important;
 }
 
 .spam-wrap .ninja-forms-field-description P {
@@ -1305,6 +1353,40 @@ INPUT[type="email"].ninja-forms-field,
 .spam-wrap INPUT[type="text"].ninja-forms-field {
   padding: 0.5em 0.7em;
   width: 50px;
+}
+
+.resources {
+  text-align: center;
+}
+
+.resources H4 {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.resource-header {
+  color: #0A7B85;
+  font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+.resource-link {
+  padding-bottom: 3em;
+}
+
+.resource-link A:link, .resource-link A:visited {
+  color: #464646;
+  font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
+  font-size: 42px;
+  line-height: 1em;
+}
+
+.resource-link A:hover, .resource-link A:active {
+  color: #0A7B85;
 }
 
 

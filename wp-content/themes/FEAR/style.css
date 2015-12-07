@@ -1300,7 +1300,7 @@ INPUT[type="email"].ninja-forms-field,
 
 .ninja-forms-required-items,
 .ninja-forms-req-symbol {
-  display: none;
+  display: none !important;
 }
 
 .ninja-forms-field.sponsor-header.nf-desc {
@@ -1323,17 +1323,20 @@ INPUT[type="email"].ninja-forms-field,
   font-size: 36px;
 }
 
+.fear-sponsor-giving-list-checkbox-wrap UL,
 .fear-sponsor-list-radio-wrap UL,
 .fear-contact-center-list-radio-wrap UL {
   display: inline-block;
 }
 
+.fear-sponsor-giving-list-checkbox-wrap LI,
 .fear-sponsor-list-radio-wrap LI,
 .fear-contact-center-list-radio-wrap LI {
   float: left;
   padding-left: 20px !important;
 }
 
+.fear-sponsor-giving-list-checkbox-wrap LI:first-child,
 .fear-sponsor-list-radio-wrap LI:first-child,
 .fear-contact-center-list-radio-wrap LI:first-child {
   padding-left: 0 !important;

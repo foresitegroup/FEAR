@@ -142,7 +142,7 @@
   <div class="site-width">
     <img src="<?php echo get_template_directory_uri(); ?>/images/robot-footer.png">
     <div class="vert-cent">
-      HOW CAN I HELP? <a href="#">LEARN MORE</a>
+      HOW CAN I HELP? <a href="sponsors/how-can-i-help/">LEARN MORE</a>
     </div>
   </div>
 </div>

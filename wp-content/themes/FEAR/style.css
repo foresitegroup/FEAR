@@ -1047,18 +1047,63 @@ A:hover .hexagon.youtube {
 }
 
 .blog-entry {
+  padding-bottom: 3em;
+  border-bottom: 1px solid #C2C2C2;
+  margin-bottom: 1.5em;
+}
+
+#main .site-width:last-of-type .blog-entry,
+.blog-entry-single {
   padding-bottom: 2em;
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.blog-entry .attachment-post-thumbnail {
+  margin-bottom: 1em;
+}
+
+.blog-entry .blog-date {
+  color: #3E6F91;
+  font-size: 17px;
+  padding-bottom: 1.2em;
+  text-transform: uppercase;
 }
 
 .blog-entry H2 {
   margin: 0;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.4em;
+  font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
 }
 
-.blog-entry .blog-date {
-  font-size: 80%;
-  font-weight: bold;
-  padding-bottom: 0.4em;
+.navigation H2 {
+  display: none;
+}
+
+.navigation .nav-links {
+  width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid #C2C2C2;
+  padding: 1em 0 3em;
+  text-align: center;
+  font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.navigation .nav-links A:link,
+.navigation .nav-links A:visited {
+  color: #434748;
+}
+
+.navigation .nav-links A:hover,
+.navigation .nav-links A:active {
+  color: #0A7B85;
+}
+
+.navigation .nav-links .page-numbers {
+  margin: 0 0.1em;
 }
 
 .grayband.about .site-width {
@@ -1087,6 +1132,16 @@ A:hover .hexagon.youtube {
 
 .about-slider {
   padding: 4em 0;
+}
+
+.about-slider A.tp-caption:link,
+.about-slider A.tp-caption:visited {
+  color: #FFFFFF !important;
+}
+
+.about-slider A.tp-caption:hover,
+.about-slider A.tp-caption:active {
+  color: #0A7B85 !important;
 }
 
 /*DIV[data-alias="about-slider"] .about-link .fa {
@@ -1333,13 +1388,13 @@ INPUT[type="email"].ninja-forms-field,
 .fear-sponsor-list-radio-wrap LI,
 .fear-contact-center-list-radio-wrap LI {
   float: left;
-  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
-.fear-sponsor-giving-list-checkbox-wrap LI:first-child,
-.fear-sponsor-list-radio-wrap LI:first-child,
-.fear-contact-center-list-radio-wrap LI:first-child {
-  padding-left: 0 !important;
+.fear-sponsor-giving-list-checkbox-wrap LI:last-child,
+.fear-sponsor-list-radio-wrap LI:last-child,
+.fear-contact-center-list-radio-wrap LI:last-child {
+  padding-right: 0 !important;
 }
 
 .fear-sponsor-list-radio-wrap LABEL,
@@ -1396,7 +1451,8 @@ INPUT[type="email"].ninja-forms-field,
 
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */
-  .site-width {
+  .site-width,
+  .navigation .nav-links {
     width: 94%;
   }
 

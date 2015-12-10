@@ -148,5 +148,5 @@
 </div>
 
 <div class="home-gallery">
-  <a href="#">VIEW GALLERY</a>
+  <a href="about-fear/2015-2016-team/2014-2015/2014-2015-gallery/">VIEW GALLERY</a>
 </div>

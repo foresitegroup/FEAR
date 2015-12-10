@@ -5,6 +5,13 @@ add_theme_support( 'post-thumbnails' );
 // I'll style the gallery myself, thank you....
 add_filter( 'use_default_gallery_style', '__return_false' );
 
+// Blog excerpt
+function new_excerpt_more( $more ) {
+  return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+// Home page blog excerpt
 function excerpt($limit) {
   $excerpt = explode(' ', get_the_excerpt(), $limit);
   if (count($excerpt)>=$limit) {

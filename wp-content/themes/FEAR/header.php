@@ -3,6 +3,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<title>
+    <?php if (is_home() && !is_front_page()) { wp_title(''); echo " - "; } ?>
     <?php if(is_home() || is_front_page()) {
       echo get_bloginfo('name');
     } else {

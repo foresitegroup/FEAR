@@ -22,7 +22,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<div class="subheader">
+				<div class="subheader" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/subheader-gray.jpg);">
 					<div class="site-width">
 						<div>
 					    <h2 class="page-title screen-reader-text"><?php single_post_title(); ?></h2>
@@ -47,9 +47,9 @@ get_header(); ?>
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+				'prev_text'          => __( '<', 'twentyfifteen' ),
+				'next_text'          => __( '>', 'twentyfifteen' ),
+				// 'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
 			) );
 
 		// If no content, include the "No posts found" template.

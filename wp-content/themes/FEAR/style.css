@@ -1447,7 +1447,12 @@ INPUT[type="email"].ninja-forms-field,
   color: #0A7B85;
 }
 
-
+@media only screen and (min-width: 1800px) {
+  .subheader,
+  .sponsor-subfooter {
+    background-size: cover;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   /* Small computer or landscape tablet */

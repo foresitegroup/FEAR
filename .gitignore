@@ -49,3 +49,4 @@ wp-content/*
 !wp-content/themes/
 wp-content/themes/*
 !wp-content/themes/FEAR
+wp-content/themes/FEAR/.DS_Store

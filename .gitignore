@@ -50,3 +50,8 @@ wp-content/*
 wp-content/themes/*
 !wp-content/themes/FEAR
 wp-content/themes/FEAR/.DS_Store
+!wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/waiting
+wp-content/plugins/waiting/*
+!wp-content/plugins/waiting/waiting.php

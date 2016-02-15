@@ -1290,6 +1290,7 @@ A:hover .hexagon.youtube {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 2em;
 }
 
 .sponsors .platinumtext,
@@ -1299,12 +1300,17 @@ A:hover .hexagon.youtube {
   font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
   font-size: 14px;
   border-bottom: 1px solid #F1F2F2;
-  margin: 2em 0 4em;
+  margin: 0 0 4em;
 }
 
 .sponsors .bronzetext {
   border-bottom: 0;
   margin: 2em 0;
+}
+
+.sponsors  .cf .one-fourth IMG {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 .sponsor-subfooter {

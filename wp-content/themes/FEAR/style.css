@@ -1281,6 +1281,10 @@ A:hover .hexagon.youtube {
   padding: 0.5em 0;
 }
 
+.sponsors {
+  padding-bottom: 2em;
+}
+
 .sponsors .cf {
   display: flex;
 }
@@ -1300,12 +1304,7 @@ A:hover .hexagon.youtube {
   font-family: 'EurostileBold', Helvetica, Arial, sans-serif;
   font-size: 14px;
   border-bottom: 1px solid #F1F2F2;
-  margin: 0 0 4em;
-}
-
-.sponsors .bronzetext {
-  border-bottom: 0;
-  margin: 2em 0;
+  margin: 2em 0 3em;
 }
 
 .sponsors  .cf .one-fourth IMG {

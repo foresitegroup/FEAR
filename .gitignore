@@ -55,3 +55,7 @@ wp-content/plugins/*
 !wp-content/plugins/waiting
 wp-content/plugins/waiting/*
 !wp-content/plugins/waiting/waiting.php
+
+wp-content/themes/FEAR/images/.DS_Store
+
+wp-content/themes/FEAR/inc/.DS_Store

@@ -706,9 +706,9 @@ A:hover .hexagon.youtube {
 }
 
 #twitter-feed .user IMG,
-#twitter-feed .user A span[data-scribe="element:name"],
+#twitter-feed .user A span[data-scribe="element:name"]/*,
 #twitter-feed UL LI P A SPAN:first-child,
-#twitter-feed UL LI P A SPAN:nth-child(3) {
+#twitter-feed UL LI P A SPAN:nth-child(3)*/ {
   display: none;
 }
 

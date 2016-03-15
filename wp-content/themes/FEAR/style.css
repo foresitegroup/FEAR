@@ -605,6 +605,14 @@ A.tp-caption:hover, A.tp-caption:active,
 .aright { text-align: right; }
 .acenter { text-align: center; }
 
+.one-fourth IMG,
+.one-half IMG,
+.one-third IMG,
+.two-third IMG {
+  max-width: 100%;
+  height: auto;
+}
+
 .side-header {
   font-family: Impact, Charcoal, sans-serif;
   font-size: 107px;

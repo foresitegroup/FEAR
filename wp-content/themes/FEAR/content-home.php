@@ -90,6 +90,7 @@
         clientId: '5ba88761dcdc43b5a29d96412cd0782e',
         get: 'user',
         userId: '923916011',
+        accessToken: '923916011.1677ed0.01c1392cca404677bfc4b97a16d0e1ab',
         limit: ImgLimit,
         template: '<a href="{{link}}" target="new"><img src="{{image}}" /></a>'
       });

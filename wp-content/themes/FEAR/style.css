@@ -780,6 +780,28 @@ A:hover .hexagon.youtube {
   display: none;
 }
 
+
+.simcal-default-calendar .simcal-nav-button.simcal-prev {
+  text-align: left;
+}
+
+.simcal-default-calendar .simcal-nav-button.simcal-next {
+  text-align: right;
+}
+
+.simcal-icon-left:before,
+.simcal-icon-right:before {
+  content: 'PREV MONTH';
+  font-family: 'Eurostile', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  width: auto;
+}
+
+.simcal-icon-right:before {
+  content: 'NEXT MONTH';
+}
+
 .simcal-default-calendar-list .simcal-event-details P,
 .simcal-default-calendar-list .simcal-event-details .simcal-event-description {
   margin: 0 !important;
@@ -1898,5 +1920,16 @@ INPUT[type="email"].ninja-forms-field,
 
   .sponsor-subfooter H2 {
     margin: 0 0 0.5em 0;
+  }
+
+  .simcal-icon-left:before,
+  .simcal-icon-right:before {
+    content: '\f104';
+    font-family: "FontAwesome";
+    font-size: 60px;
+  }
+
+  .simcal-icon-right:before {
+    content: '\f105';
   }
 }

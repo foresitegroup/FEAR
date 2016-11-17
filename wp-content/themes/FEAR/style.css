@@ -1483,6 +1483,36 @@ INPUT[type="email"].ninja-forms-field,
   color: #0A7B85;
 }
 
+.alignleft {
+  display: inline;
+  float: left;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+}
+
+.aligncenter {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img.alignleft {
+  margin: 0.4em 1.6em 1.6em 0;
+}
+
+img.alignright {
+  margin: 0.4em 0 1.6em 1.6em;
+}
+
+img.aligncenter {
+  clear: both;
+  margin-top: 0.4em;
+  margin-bottom: 1.6em;
+}
+
 @media only screen and (min-width: 1800px) {
   #home-video,
   .home-gallery,

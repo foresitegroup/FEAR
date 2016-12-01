@@ -231,6 +231,7 @@ A.roundgreen:hover, A.roundgreen:active {
   transform: translateY(-50%); /* Vertical centering */
 }
 
+.responsive-video,
 .video {
   position: relative;
   padding-bottom: 56.25%;
@@ -238,7 +239,14 @@ A.roundgreen:hover, A.roundgreen:active {
   overflow: hidden;
   max-width: 100%;
 }
- 
+
+.responsive-video {
+  margin-bottom: 1.5em;
+}
+
+.responsive-video iframe,
+.responsive-video object,
+.responsive-video embed,
 .video iframe,
 .video object,
 .video embed {

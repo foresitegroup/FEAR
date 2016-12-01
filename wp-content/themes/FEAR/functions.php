@@ -122,4 +122,11 @@ function mytheme_load_widget() {
   add_filter('mytheme_widget_text', 'do_shortcode');
 }
 add_action( 'widgets_init', 'mytheme_load_widget' );
+
+// Wrap video embed code in DIV for responsive goodness
+add_filter( 'embed_oembed_html', 'my_oembed_filter', 10, 4 ) ;
+function my_oembed_filter($html, $url, $attr, $post_ID) {
+  $return = '<div class="responsive-video">'.$html.'</div>';
+  return $return;
+}
 ?>

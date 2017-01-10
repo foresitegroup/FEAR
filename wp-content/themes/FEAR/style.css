@@ -1478,6 +1478,16 @@ INPUT[type="email"].ninja-forms-field,
 
 .resource-link {
   padding-bottom: 3em;
+  
+  /* Careful, this breaks the word wherever it is without a hyphen */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  /* Adds a hyphen where the word breaks */
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .resource-link A:link, .resource-link A:visited {
@@ -1519,6 +1529,11 @@ img.aligncenter {
   clear: both;
   margin-top: 0.4em;
   margin-bottom: 1.6em;
+}
+
+.medium {
+  max-width: 40%;
+  height: auto;
 }
 
 @media only screen and (min-width: 1800px) {
@@ -1969,5 +1984,9 @@ img.aligncenter {
 
   .simcal-icon-right:before {
     content: '\f105';
+  }
+
+  .medium {
+    max-width: 100%;
   }
 }

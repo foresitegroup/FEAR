@@ -24,6 +24,9 @@
   <script type="text/javascript">
     jQuery(document).ready(function() {
       jQuery("a[href^='http'], a[href$='.pdf']").not("[href*='" + window.location.host + "']").attr('target','_blank');
+
+      // Mobile menu dropdowns
+      jQuery("#menu-main-menu li:has(ul)").doubleTapToGo();
     });
   </script>
   <!-- BEGIN Google Analytics -->

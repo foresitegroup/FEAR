@@ -32,6 +32,9 @@ function enqueue_and_register_my_scripts(){
   wp_register_script(
     'responsive-lightbox-swipebox', get_stylesheet_directory_uri() . '/inc/jquery.swipebox.min.js', array( 'jquery' )
   );
+  wp_enqueue_script(
+    'doubletaptogo', get_stylesheet_directory_uri() . '/inc/doubletaptogo.js', array( 'jquery' )
+  );
 }
 
 // Define menus

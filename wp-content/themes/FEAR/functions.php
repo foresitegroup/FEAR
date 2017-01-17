@@ -58,6 +58,10 @@ function arphabet_widgets_init() {
     'id'            => 'home_page_calendar',
   ));
   register_sidebar(array(
+    'name'          => 'Home Page Gallery',
+    'id'            => 'home_page_gallery_link',
+  ));
+  register_sidebar(array(
     'name'          => 'MailChimp Sign Up',
     'id'            => 'mailchimp_signup',
   ));

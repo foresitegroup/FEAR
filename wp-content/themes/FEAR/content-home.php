@@ -149,5 +149,5 @@
 </div>
 
 <div class="home-gallery">
-  <a href="about-fear/2015-2016-team/2014-2015/2014-2015-gallery/">VIEW GALLERY</a>
+  <a href="<?php dynamic_sidebar( 'home_page_gallery_link' ); ?>">VIEW GALLERY</a>
 </div>

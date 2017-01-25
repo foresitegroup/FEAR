@@ -1221,7 +1221,7 @@ A:hover .hexagon.youtube {
 }
 
 .departments IMG {
-  height: 75px !important;
+  height: 200px !important;
   width: auto !important;
 }
 
@@ -1519,16 +1519,27 @@ INPUT[type="email"].ninja-forms-field,
 
 img.alignleft {
   margin: 0.4em 1.6em 1.6em 0;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 img.alignright {
   margin: 0.4em 0 1.6em 1.6em;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 img.aligncenter {
   clear: both;
   margin-top: 0.4em;
   margin-bottom: 1.6em;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+img.alignnone {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 .medium {
@@ -1636,7 +1647,8 @@ img.aligncenter {
   }
   
   .departments IMG {
-    max-width: none;
+    max-width: 100%;
+    height: auto !important;
   }
 
   .departments H4 {

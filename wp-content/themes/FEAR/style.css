@@ -1564,6 +1564,101 @@ img.alignnone {
   height: auto;
 }
 
+@media only screen and (max-width: 1015px) {
+  .board-game { width: 94%; }
+
+  .subheader h2 { font-size: 8vw; }
+}
+
+@media only screen and (max-width: 800px) {
+  .subheader .site-width.board-game DIV { white-space: nowrap; }
+}
+
+@media only screen and (max-width: 480px) {
+  .subheader .site-width.board-game DIV { white-space: normal; }
+}
+
+.board-game img.alignright {
+  max-width: 48% !important;
+}
+
+.board-game H5 {
+  margin-top: 1em;
+  text-align: left;
+}
+
+.board-game UL {
+  margin: 0 0 0 0.7em;
+  padding: 0 0 0 0.7em;
+  position: relative;
+  top: -1em;
+}
+
+.paypal {
+  float: left;
+  width: 45%;
+  padding-right: 4%;
+  border-right: 5px solid #0A7B85;
+  text-align: center;
+}
+
+.paypal.paypal-single {
+  float: right;
+  padding-right: 0;
+  border-right: 0;
+}
+
+.paypal H4 {
+  font-size: 20px;
+  display: block;
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+
+.paypal .names {
+  float: left;
+  width: 45%;
+}
+
+.paypal .names INPUT {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+}
+
+.paypal FIELDSET {
+  float: right;
+  width: 48%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.paypal FIELDSET LEGEND { padding: 0; }
+
+.paypal FIELDSET LABEL {
+  display: block;
+}
+
+.paypal INPUT[type="submit"] {
+  margin-top: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .paypal { float: none; width: 100%; padding-right: 0; border-right: 0; }
+  .paypal.paypal-single {
+    float: none;
+    width: 100%;
+    margin-top: 2em;
+    border-top: 5px solid #0A7B85;
+    padding-top: 2em;
+  }
+}
+
+
+
 @media only screen and (min-width: 1800px) {
   #home-video,
   .home-gallery,

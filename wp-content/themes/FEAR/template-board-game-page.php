@@ -54,11 +54,12 @@ get_header();
       <fieldset>
         <legend>Our first game preference is</legend>
         <input type="hidden" name="on4_1" value="Our first game preference is">
-        <label><input type="radio" name="os4_1" value="Parcheesi"> Parcheesi</label>
+        <label><input type="radio" name="os4_1" value="Aggravation"> Aggravation</label>
         <label><input type="radio" name="os4_1" value="Sorry"> Sorry</label>
-        <label><input type="radio" name="os4_1" value="Trouble"> Trouble</label>
-        <label><input type="radio" name="os4_1" value="Candyland"> Candyland</label>
         <label><input type="radio" name="os4_1" value="Operation"> Operation</label>
+        <label><input type="radio" name="os4_1" value="Trouble"> Trouble</label>
+        <label><input type="radio" name="os4_1" value="Clue"> Clue</label>
+        <label><input type="radio" name="os4_1" value="Mousetrap"> Mousetrap</label>
       </fieldset>
 
       <div style="clear: both;"></div>
@@ -88,11 +89,12 @@ get_header();
       <fieldset>
         <legend>My first game preference is</legend>
         <input type="hidden" name="on2_1" value="My first game preference is">
-        <label><input type="radio" name="os2_1" value="Parcheesi"> Parcheesi</label>
+        <label><input type="radio" name="os2_1" value="Aggravation"> Aggravation</label>
         <label><input type="radio" name="os2_1" value="Sorry"> Sorry</label>
-        <label><input type="radio" name="os2_1" value="Trouble"> Trouble</label>
-        <label><input type="radio" name="os2_1" value="Candyland"> Candyland</label>
         <label><input type="radio" name="os2_1" value="Operation"> Operation</label>
+        <label><input type="radio" name="os2_1" value="Trouble"> Trouble</label>
+        <label><input type="radio" name="os2_1" value="Clue"> Clue</label>
+        <label><input type="radio" name="os2_1" value="Mousetrap"> Mousetrap</label>
       </fieldset>
 
       <div style="clear: both;"></div>

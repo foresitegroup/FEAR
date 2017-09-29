@@ -56,10 +56,9 @@ get_header();
         <input type="hidden" name="on4_1" value="Our first game preference is">
         <label><input type="radio" name="os4_1" value="Aggravation"> Aggravation</label>
         <label><input type="radio" name="os4_1" value="Sorry"> Sorry</label>
-        <label><input type="radio" name="os4_1" value="Operation"> Operation</label>
         <label><input type="radio" name="os4_1" value="Trouble"> Trouble</label>
-        <label><input type="radio" name="os4_1" value="Clue"> Clue</label>
         <label><input type="radio" name="os4_1" value="Mousetrap"> Mousetrap</label>
+        <label><input type="radio" name="os4_1" value="Uno"> Uno</label>
       </fieldset>
 
       <div style="clear: both;"></div>
@@ -91,10 +90,9 @@ get_header();
         <input type="hidden" name="on2_1" value="My first game preference is">
         <label><input type="radio" name="os2_1" value="Aggravation"> Aggravation</label>
         <label><input type="radio" name="os2_1" value="Sorry"> Sorry</label>
-        <label><input type="radio" name="os2_1" value="Operation"> Operation</label>
         <label><input type="radio" name="os2_1" value="Trouble"> Trouble</label>
-        <label><input type="radio" name="os2_1" value="Clue"> Clue</label>
         <label><input type="radio" name="os2_1" value="Mousetrap"> Mousetrap</label>
+        <label><input type="radio" name="os2_1" value="Uno"> Uno</label>
       </fieldset>
 
       <div style="clear: both;"></div>

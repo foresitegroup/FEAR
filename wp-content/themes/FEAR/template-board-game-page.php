@@ -19,8 +19,12 @@ get_header();
     the_content();
   endwhile;
   ?>
+  
+  <br>
+  <br>
+  <strong>Pre-registration has concluded for the Board Game Bonanza. However there are still PLENTY of seats and tables remaining. Sales can be completed at the door honoring all of the discounts provided through table sales. We hope to see you at the first annual Board Game Bonanza!</strong>
 
-  <h5>Join Us</h5>
+  <!--<h5>Join Us</h5>
   You may purchase tickets and select game preferences here. You may also buy tickets at the door. Best to do it early!<br>
   <br>
 
@@ -103,7 +107,7 @@ get_header();
 
   <div style="clear: both; font-size: 70%; line-height: 1.3em; padding: 3em 0; color: #E04E42;">
     NOTICE: This is an ADULTS ONLY event - no students or under age community members will be admitted, be in attendance, or take part in any part of this event.
-  </div>
+  </div>-->
 </div>
 
 <?php get_footer(); ?>

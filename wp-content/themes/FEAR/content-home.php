@@ -83,20 +83,18 @@
   <div class="two-third last">
     <h2 class="home-head">#NICOLETFEAR4786</h2>
     <hr>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/inc/instafeed.min.js"></script>
-    <script type="text/javascript">
-      var ImgLimit = (jQuery(window).width() < 800) ? 4 : 6;
-      var userFeed = new Instafeed({
-        clientId: '5ba88761dcdc43b5a29d96412cd0782e',
-        get: 'user',
-        userId: '923916011',
-        accessToken: '923916011.1677ed0.01c1392cca404677bfc4b97a16d0e1ab',
-        limit: ImgLimit,
-        template: '<a href="{{link}}" target="new"><img src="{{image}}" /></a>'
-      });
-      userFeed.run();
-    </script>
-    <div id="instafeed"></div>
+    <div id="instafeed">
+      <?php
+      $i = 1;
+      $json = json_decode(file_get_contents('https://www.instagram.com/nicoletfear4786/?__a=1'));
+      foreach ($json->user->media->nodes as $key => $value) {
+        if ($i <= 6) {
+          echo '<a href="'.'https://www.instagram.com/p/'.$value->code.'" style="background-image: url('.$value->display_src.');"></a>';
+          $i++;
+        } else { break; }
+      }
+      ?>
+    </div>
     <div class="soc-foot">
       <a href="http://instagram.com/nicoletfear4786"><div class="hexagon instagram"><i class="fa fa-instagram"></i></div> VIEW MORE</a>
     </div>

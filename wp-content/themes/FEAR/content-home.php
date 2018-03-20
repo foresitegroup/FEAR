@@ -87,9 +87,9 @@
       <?php
       $i = 1;
       $json = json_decode(file_get_contents('https://www.instagram.com/nicoletfear4786/?__a=1'));
-      foreach ($json->user->media->nodes as $key => $value) {
+      foreach ($json->graphql->user->edge_owner_to_timeline_media->edges as $key => $value) {
         if ($i <= 6) {
-          echo '<a href="'.'https://www.instagram.com/p/'.$value->code.'" style="background-image: url('.$value->display_src.');"></a>';
+          echo '<a href="'.'https://www.instagram.com/p/'.$value->node->shortcode.'" style="background-image: url('.$value->node->thumbnail_src.');"></a>';
           $i++;
         } else { break; }
       }

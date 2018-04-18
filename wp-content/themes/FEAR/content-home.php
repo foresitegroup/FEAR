@@ -86,7 +86,8 @@
     <div id="instafeed">
       <?php
       $i = 1;
-      $json = json_decode(file_get_contents('https://www.instagram.com/nicoletfear4786/?__a=1'));
+      // $json = json_decode(file_get_contents('https://www.instagram.com/nicoletfear4786/?__a=1'));
+      $json = json_decode(file_get_contents('https://apinsta.herokuapp.com/u/nicoletfear4786'));
       foreach ($json->graphql->user->edge_owner_to_timeline_media->edges as $key => $value) {
         if ($i <= 6) {
           echo '<a href="'.'https://www.instagram.com/p/'.$value->node->shortcode.'" style="background-image: url('.$value->node->thumbnail_src.');"></a>';

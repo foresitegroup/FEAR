@@ -5,6 +5,10 @@ add_theme_support( 'post-thumbnails' );
 // I'll style the gallery myself, thank you....
 add_filter( 'use_default_gallery_style', '__return_false' );
 
+// I don't need to be notified about every automatic update
+add_filter( 'auto_plugin_update_send_email', '__return_false' );
+add_filter( 'auto_theme_update_send_email', '__return_false' );
+
 // Blog excerpt
 function new_excerpt_more( $more ) {
   return '...';
